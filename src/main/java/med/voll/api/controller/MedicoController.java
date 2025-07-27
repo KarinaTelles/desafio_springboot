@@ -10,6 +10,7 @@ public class MedicoController {
     @PostMapping
     public void cadastrar(@RequestBody CadastroDoMedico json){
       dadosCadastroMedico = json;
+      System.out.println(dadosCadastroMedico);
     }
     @GetMapping
     public String imprimir(){
