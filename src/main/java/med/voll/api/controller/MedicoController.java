@@ -5,15 +5,14 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/medicos")
-public class medicoController {
-    DadosCadastroMedico ohyeah;
+public class MedicoController {
+    DadosCadastroMedico dadosCadastroMedico;
     @PostMapping
     public void cadastrar(@RequestBody DadosCadastroMedico json){
-      System.out.println(json);
-      ohyeah = json;
+      dadosCadastroMedico = json;
     }
     @GetMapping
-    public void imprimeEssaParadaNaTela(){
-        
+    public String imprimir(){
+        return dadosCadastroMedico.toString();
     }
 }
