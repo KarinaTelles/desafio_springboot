@@ -21,8 +21,20 @@ public class MedicoJPA {
     @Enumerated(EnumType.STRING)
     private Especialidade especialidade;
     @Embedded
-    private EnderecoJPA enderecoRecord;
+    private EnderecoJPA enderecoJPA;
 
     public MedicoJPA(CadastroMedicoRecord json) {
+        this.nome = json.nome();
+        this.email = json.email();
+        this.crm = json.crm();
+        this.especialidade = json.especialidade();
+        this.enderecoJPA = new EnderecoJPA(
+                json.enderecoRecord().logradouro(),
+                json.enderecoRecord().bairro(),
+                json.enderecoRecord().cep(),
+                json.enderecoRecord().cidade(),
+                json.enderecoRecord().complemento(),
+                json.enderecoRecord().numero(),
+                json.enderecoRecord().uf());
     }
 }
