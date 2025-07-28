@@ -19,13 +19,13 @@ public class EnderecoJPA {
     private String numero;
     private String uf;
 
-    public EnderecoJPA(EnderecoRecord enderecoRecord) {
-        this.logradouro = enderecoRecord.logradouro();
-        this.bairro = enderecoRecord.bairro();
-        this.cep = enderecoRecord.cep();
-        this.cidade = enderecoRecord.cidade();
-        this.complemento = enderecoRecord.complemento();
-        this.numero = enderecoRecord.numero();
-        this.uf = enderecoRecord.uf();
+    public EnderecoJPA(EnderecoRecord dados) {
+        this.logradouro = dados.logradouro();
+        this.bairro = dados.bairro();
+        this.cep = dados.cep();
+        this.cidade = dados.cidade();
+        this.complemento = dados.complemento();
+        this.numero = dados.numero();
+        this.uf = dados.uf();
     }
 }

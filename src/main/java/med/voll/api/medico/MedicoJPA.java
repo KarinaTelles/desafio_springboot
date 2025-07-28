@@ -23,11 +23,11 @@ public class MedicoJPA {
     @Embedded
     private EnderecoJPA enderecoJPA;
 
-    public MedicoJPA(CadastroMedicoRecord json) {
-        this.nome = json.nome();
-        this.email = json.email();
-        this.crm = json.crm();
-        this.especialidade = json.especialidade();
-        this.enderecoJPA = new EnderecoJPA(json.enderecoRecord());
+    public MedicoJPA(CadastroMedicoRecord dados) {
+        this.nome = dados.nome();
+        this.email = dados.email();
+        this.crm = dados.crm();
+        this.especialidade = dados.especialidade();
+        this.enderecoJPA = new EnderecoJPA(dados.enderecoRecord());
     }
 }
