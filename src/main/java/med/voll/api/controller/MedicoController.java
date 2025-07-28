@@ -1,6 +1,7 @@
 package med.voll.api.controller;
 
-import med.voll.api.medico.CadastroMedicoRecord;
+import jakarta.transaction.Transactional;
+import med.voll.api.medico.DadosCadastroMedico;
 import med.voll.api.medico.Medico;
 import med.voll.api.medico.MedicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,8 @@ public class MedicoController {
     @Autowired
     private MedicoRepository repository;
     @PostMapping
-    public void cadastrar(@RequestBody CadastroMedicoRecord json){
+    @Transactional
+    public void cadastrar(@RequestBody DadosCadastroMedico json){
         repository.save(new Medico(json));
     }
 }

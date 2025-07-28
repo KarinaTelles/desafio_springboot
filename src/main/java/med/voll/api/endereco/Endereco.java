@@ -18,7 +18,7 @@ public class Endereco {
     private String numero;
     private String uf;
 
-    public Endereco(EnderecoRecord dados) {
+    public Endereco(DadosCadastroEndereco dados) {
         this.logradouro = dados.logradouro();
         this.bairro = dados.bairro();
         this.cep = dados.cep();
