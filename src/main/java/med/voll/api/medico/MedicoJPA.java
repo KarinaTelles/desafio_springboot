@@ -23,4 +23,6 @@ public class MedicoJPA {
     @Embedded
     private EnderecoJPA enderecoRecord;
 
+    public MedicoJPA(CadastroMedicoRecord json) {
+    }
 }
