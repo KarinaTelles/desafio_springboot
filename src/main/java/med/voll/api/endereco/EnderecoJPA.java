@@ -18,4 +18,14 @@ public class EnderecoJPA {
     private String complemento;
     private String numero;
     private String uf;
+
+    public EnderecoJPA(EnderecoRecord enderecoRecord) {
+        this.logradouro = enderecoRecord.logradouro();
+        this.bairro = enderecoRecord.bairro();
+        this.cep = enderecoRecord.cep();
+        this.cidade = enderecoRecord.cidade();
+        this.complemento = enderecoRecord.complemento();
+        this.numero = enderecoRecord.numero();
+        this.uf = enderecoRecord.uf();
+    }
 }
