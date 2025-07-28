@@ -5,14 +5,14 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.voll.api.endereco.EnderecoJPA;
+import med.voll.api.endereco.Endereco;
 @Table(name="medicos")
 @Entity(name="Medicos")
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of="id")
-public class MedicoJPA {
+public class Medico {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String nome;
@@ -21,13 +21,13 @@ public class MedicoJPA {
     @Enumerated(EnumType.STRING)
     private Especialidade especialidade;
     @Embedded
-    private EnderecoJPA enderecoJPA;
+    private Endereco endereco;
 
-    public MedicoJPA(CadastroMedicoRecord dados) {
+    public Medico(CadastroMedicoRecord dados) {
         this.nome = dados.nome();
         this.email = dados.email();
         this.crm = dados.crm();
         this.especialidade = dados.especialidade();
-        this.enderecoJPA = new EnderecoJPA(dados.enderecoRecord());
+        this.endereco = new Endereco(dados.enderecoRecord());
     }
 }
