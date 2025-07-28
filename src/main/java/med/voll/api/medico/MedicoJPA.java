@@ -1,10 +1,10 @@
 package med.voll.api.medico;
 
 import jakarta.persistence.*;
-import med.voll.api.endereco.Endereco;
+import med.voll.api.endereco.EnderecoJPA;
 @Table(name="medicos")
 @Entity(name="Medicos")
-public class Medico  {
+public class MedicoJPA {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String nome;
@@ -13,6 +13,6 @@ public class Medico  {
     @Enumerated(EnumType.STRING)
     private Especialidade especialidade;
     @Embedded
-    private Endereco endereco;
+    private EnderecoJPA enderecoRecord;
 
 }

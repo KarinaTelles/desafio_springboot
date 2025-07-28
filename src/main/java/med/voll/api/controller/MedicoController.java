@@ -1,19 +1,19 @@
 package med.voll.api.controller;
 
-import med.voll.api.medico.CadastroDoMedico;
+import med.voll.api.medico.CadastroMedicoRecord;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/medicos")
 public class MedicoController {
-    CadastroDoMedico cadastroDoMedico;
+    CadastroMedicoRecord cadastroMedicoRecord;
     @PostMapping
-    public void cadastrar(@RequestBody CadastroDoMedico json){
-      cadastroDoMedico = json;
-      System.out.println(cadastroDoMedico);
+    public void cadastrar(@RequestBody CadastroMedicoRecord json){
+      cadastroMedicoRecord = json;
+      System.out.println(cadastroMedicoRecord);
     }
     @GetMapping
     public String imprimir(){
-        return cadastroDoMedico.toString();
+        return cadastroMedicoRecord.toString();
     }
 }
