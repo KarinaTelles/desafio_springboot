@@ -1,7 +1,7 @@
 ﻿# Json para teste
  {
-	"nome": "Rodrigo Ferreira",
-	"email": "rodrigo.ferreira@voll.med",
+	"nome": "Fernando Cunha",
+	"email": "fernando.cunha@med.com",
 	"crm": "123458",
 	"especialidade": "ORTOPEDIA",
 	"dadosEndereco":
