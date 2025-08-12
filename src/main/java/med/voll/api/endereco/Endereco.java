@@ -18,13 +18,13 @@ public class Endereco {
     private String numero;
     private String uf;
 
-    public Endereco(DadosEndereco dados) {
-        this.logradouro = dados.logradouro();
-        this.bairro = dados.bairro();
-        this.cep = dados.cep();
-        this.cidade = dados.cidade();
-        this.complemento = dados.complemento();
-        this.numero = dados.numero();
-        this.uf = dados.uf();
+    public Endereco(DadosEndereco dadosEndereco) {
+        this.logradouro = dadosEndereco.logradouro();
+        this.bairro = dadosEndereco.bairro();
+        this.cep = dadosEndereco.cep();
+        this.cidade = dadosEndereco.cidade();
+        this.complemento = dadosEndereco.complemento();
+        this.numero = dadosEndereco.numero();
+        this.uf = dadosEndereco.uf();
     }
 }
