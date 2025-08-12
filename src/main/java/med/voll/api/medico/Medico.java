@@ -40,8 +40,8 @@ public class Medico {
         if(dadosAtualizacaoMedico.nome()!= null){
             this.email = dadosAtualizacaoMedico.email();
         }
-        if(dadosAtualizacaoMedico.nome()!= null) {
-            this.endereco = new Endereco(dadosAtualizacaoMedico.dadosEndereco());
+        if(dadosAtualizacaoMedico.dadosEndereco()!= null) {
+            this.endereco.atualizarInformacoes(dadosAtualizacaoMedico.dadosEndereco());
         }
     }
 }
