@@ -1,20 +1,22 @@
 ﻿# Json para teste do POST
- {
-	"nome": "Fernando Cunha",
+{ 
+	"nome": "Fernando Cunha", 
 	"email": "fernando.cunha@med.com",
-	"crm": "123458",
-	"especialidade": "ORTOPEDIA",
-	"dadosEndereco":
-	{
-		"logradouro": "Rua das Esmeraldas",
-		"bairro": "Pedras preciosas",
-		"cep": "123456789",
-		"cidade": "Brasília",
-		"uf": "DF",
-		"numero":"1",
-		"complemento":"casa"
-	}
+	"telefone":"4399401829",
+	"crm": "123458", 
+	"especialidade": "ORTOPEDIA", 
+	"dadosEndereco": 
+		{
+			"logradouro": "Rua das Esmeraldas",
+			"bairro": "Pedras preciosas", 
+			"cep": "12345678",
+			"cidade": "Brasília",
+			"uf": "DF",
+			"numero":"1",
+			"complemento":"casa" 
+		} 
 }
+
 ﻿# Json para teste do PUT
  {
 	"id":1,
