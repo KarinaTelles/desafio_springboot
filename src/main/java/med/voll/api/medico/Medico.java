@@ -48,6 +48,6 @@ public class Medico {
     }
 
     public void excluir() {
-        this.ativo = true;
+        this.ativo = false;
     }
 }
