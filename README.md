@@ -1,6 +1,6 @@
 ﻿# Json para teste do POST
 ---
- 
+``` 
 { 
 	"nome": "Fernando Cunha", 
 	"email": "fernando.cunha@med.com",
@@ -18,8 +18,7 @@
 			"complemento":"casa" 
 		} 
 }
-
-
+```
 ---
 
 ﻿# Json para teste do PUT
