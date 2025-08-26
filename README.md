@@ -19,7 +19,8 @@
 		} 
 }
 
-﻿# Json para teste do POST
+
+﻿# Json para teste do PUT
  
  {
 	"id":1,
