@@ -15,9 +15,10 @@ DadosEndereco
         String cep,
         @NotBlank
         String cidade,
-        @NotBlank
         String complemento,
+        @NotBlank
         String numero,
+        @NotBlank
         String uf
         )
 {
