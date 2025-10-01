@@ -1,7 +1,6 @@
 package med.api.dtos;
 
 import jakarta.validation.constraints.NotNull;
-import med.api.endereco.DadosEndereco;
 
 public record DadosAtualizacaoMedico
         (
