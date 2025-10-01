@@ -42,11 +42,13 @@ public class Medico {
         if(dadosAtualizacaoMedico.nome()!= null){
             this.email = dadosAtualizacaoMedico.email();
         }
+        if(dadosAtualizacaoMedico.telefone()!=null){
+            this.telefone = dadosAtualizacaoMedico.telefone();
+        }
         if(dadosAtualizacaoMedico.dadosEndereco()!= null) {
             this.endereco.atualizarInformacoes(dadosAtualizacaoMedico.dadosEndereco());
         }
     }
-
     public void excluir() {
         this.ativo = false;
     }

@@ -28,7 +28,7 @@ public class MedicoController {
     @PutMapping
     @Transactional
     public void atualizar(@RequestBody @Valid DadosAtualizacaoMedico dadosAtualizacaoMedico){
-        var medico = repository.getReferenceById(dadosAtualizacaoMedico.id());
+        Medico medico = repository.getReferenceById(dadosAtualizacaoMedico.id());
         medico.atualizarInformacoes(dadosAtualizacaoMedico);
     }
     //deleta de fato no banco de dados.
