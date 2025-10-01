@@ -6,7 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.api.endereco.Endereco;
 import org.hibernate.validator.constraints.br.CPF;
 
 @Table(name="paciente")
