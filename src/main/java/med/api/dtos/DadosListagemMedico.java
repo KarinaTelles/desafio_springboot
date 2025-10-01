@@ -1,4 +1,7 @@
-package med.api.medico;
+package med.api.dtos;
+
+import med.api.entity.Medico;
+import med.api.enums.Especialidade;
 
 public record DadosListagemMedico(Long id, String nome, String email, String crm, Especialidade especialidade) {
     public DadosListagemMedico(Medico medico){

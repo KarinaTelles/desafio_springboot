@@ -1,4 +1,4 @@
-package med.api.paciente;
+package med.api.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
