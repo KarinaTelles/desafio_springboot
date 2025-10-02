@@ -18,10 +18,8 @@ public class Paciente {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String nome;
-    @Email
     private String email;
     private String telefone;
-    @CPF
     private String cpf;
     @Embedded
     private Endereco endereco;
