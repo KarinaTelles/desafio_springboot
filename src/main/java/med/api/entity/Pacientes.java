@@ -1,15 +1,17 @@
 package med.api.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import med.api.dtos.DadosCadastroPaciente;
 import org.hibernate.validator.constraints.br.CPF;
 
-@Table(name="paciente")
-@Entity(name="Paciente")
+@Table(name="pacientes")
+@Entity(name="Pacientes")
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
@@ -23,4 +25,12 @@ public class Paciente {
     private String cpf;
     @Embedded
     private Endereco endereco;
+
+    public Paciente(DadosCadastroPaciente dadosCadastroPaciente) {
+        this.nome = dadosCadastroPaciente.nome();
+        this.email = dadosCadastroPaciente.email();
+        this.telefone = dadosCadastroPaciente.telefone();
+        this.cpf = dadosCadastroPaciente.cpf();
+        this.endereco = new Endereco(dadosCadastroPaciente.dadosEndereco());
+    }
 }
