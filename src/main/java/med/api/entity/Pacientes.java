@@ -1,14 +1,11 @@
 package med.api.entity;
 
 import jakarta.persistence.*;
-import jakarta.validation.Valid;
-import jakarta.validation.constraints.Email;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import med.api.dtos.DadosCadastroPaciente;
-import org.hibernate.validator.constraints.br.CPF;
 
 @Table(name="pacientes")
 @Entity(name="Pacientes")
@@ -16,7 +13,7 @@ import org.hibernate.validator.constraints.br.CPF;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of="id")
-public class Paciente {
+public class Pacientes {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String nome;
@@ -26,7 +23,7 @@ public class Paciente {
     @Embedded
     private Endereco endereco;
 
-    public Paciente(DadosCadastroPaciente dadosCadastroPaciente) {
+    public Pacientes(DadosCadastroPaciente dadosCadastroPaciente) {
         this.nome = dadosCadastroPaciente.nome();
         this.email = dadosCadastroPaciente.email();
         this.telefone = dadosCadastroPaciente.telefone();
