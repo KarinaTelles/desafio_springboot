@@ -25,4 +25,5 @@ public record DadosCadastroMedico
         DadosEndereco dadosEndereco
         )
 {
+        //
 }
